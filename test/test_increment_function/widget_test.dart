@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_testing/pages/increment_function.dart';
+import 'package:flutter_testing/view/pages/increment_function_page_example/increment_function.dart';
 
 void main() {
   testWidgets("Test Widget for increment text", (WidgetTester tester) async {
