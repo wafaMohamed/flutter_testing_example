@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 /// The [Favorites] class holds a list of favorite items saved by the user.
 class FavoritesProvider extends ChangeNotifier {
   final List<int> _favoritesItems = [];
+
   List<int> get favoritesItems => _favoritesItems;
+
   // Add 2 Function for adding and removing items from the list
   void addFavoriteItem(int item) {
     _favoritesItems.add(item);
@@ -11,9 +13,10 @@ class FavoritesProvider extends ChangeNotifier {
   }
 
   void removeFavoriteItem(int item) {
-    _favoritesItems.remove(item);
+    _favoritesItems.removeWhere((element) => element == item);
     notifyListeners();
   }
+  // removeWhere method to remove all occurrences of the specified item
 }
 // summary:
 // notifyListeners, it tells Flutter to rebuild any widgets that are currently listening to this object.This is particularly useful in scenarios where you have widgets in your app that depend on the state of this object.
