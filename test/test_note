@@ -1,0 +1,57 @@
+what is testing?
+Ensuring your app does exactly what it should.
+your test specific input AND expect specific output.
+********************************************************************************************************
+1- in flutter there are three types of test:
+   1- unit test: we can test individual function or individual classes
+   2- widget testing(component test): test individual widget by mocking its dependencies
+   3- integration test (End-to-End) testing: test whole app it is being used by a user to confirm that everything is working or test large part of app.
+********************************************************************************************************
+2- unit testing: by (test) function you can test individual classes and function
+   - flutter add build-in library called  flutter_test: in  dev_dependencies:
+           flutter_test:
+   - run the test by:
+     flutter test
+   - but first check the root:
+   cd path\to\your\flutter\project
+********************************************************************************************************
+3- Widget Test:
+   - by (testWidget) Function:
+   - tester.(pumpWidget) is used to build and render the widget tree.
+   - expect is used for making assertions in tests. In this case, it expects to find exactly one widget with the text 'Hello' in the widget tree.
+   - Interacting with the Widget:
+     * tester.tap simulates a tap on the widget found by find.byType(ElevatedButton).
+     * tester.pump() triggers a frame to process the changes caused by the tap, after tap we need to wait for execution of one frame
+
+   - Verification After Interaction:
+     After tapping, it expects not to find any widget with the text 'Hello' (indicating it's removed),
+     and it expects to find one widget with the text 'testing'.
+     *summary:
+     The (find) and (expect) functions are essential for locating and verifying widgets in the widget tree during testing.
+********************************************************************************************************
+4- Integration test: should to be in actual device.
+   - add new folder called it => integration_test , don't put it in  test file
+   and inside it any file called name(_test.dart)
+    first file -> app_test.dart ->import flutter test and integration_test inside it
+
+   - first add 2 packages:
+      * flutter_driver:
+      * test: //instead of flutter_test
+      OR like a doc:
+      * integration_test:
+      * test:
+********************************************************************************************************
+5- Integration test(End-to-End): is a process of testing multiple components of an app together, to ensure that they function correctly as a whole.
+
+********************************************************************************************************
+6- what is the difference between TDD(Test Driven Development) - BDD(Behavior Driven Development)?
+   * BDD(Behavior Driven Development):
+     test more the behavior of app:
+     Given
+     When
+     Then
+     * so it test the behavior not implementation like TDD, like: test static initialization index with 0 that increase one
+       => make it dynamic to  be automatically increase with any number.
+
+********************************************************************************************************
+How to Think before Writing Unit Testing
