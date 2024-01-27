@@ -17,14 +17,14 @@ class FavoriteItemTile extends StatelessWidget {
       child: ListTile(
         title: Text(
           'Item: $itemNumber',
-          key: Key('favorites_text_$itemNumber'),
+          key: Key('text_$itemNumber'),
         ),
         leading: CircleAvatar(
           backgroundColor:
               Colors.primaries[itemNumber % Colors.primaries.length],
         ),
         trailing: IconButton(
-          key: Key('remove icon $itemNumber'),
+          key: Key('remove_icon_$itemNumber'),
           icon: Icon(
             Icons.close,
             color: Colors.red[900],

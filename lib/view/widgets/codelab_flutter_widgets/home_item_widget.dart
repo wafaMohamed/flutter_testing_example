@@ -19,14 +19,14 @@ class HomeItemTile extends StatelessWidget {
       child: ListTile(
         title: Text(
           'Item: $itemNumber',
-          key: Key('favorites_text_$itemNumber'),
+          key: Key('text_$itemNumber'),
         ),
         leading: CircleAvatar(
           backgroundColor:
               Colors.primaries[itemNumber % Colors.primaries.length],
         ),
         trailing: IconButton(
-          key: Key('favorite icon $itemNumber'),
+          key: Key('icon_$itemNumber'),
           icon: itemContainsList
               ? Icon(Icons.favorite)
               : Icon(Icons.favorite_border),
