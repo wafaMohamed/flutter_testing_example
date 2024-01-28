@@ -2,15 +2,15 @@
 //? When you tap the button, the message displayed on the screen will change.
 import 'package:flutter/material.dart';
 
-class IncrementFunctionPage extends StatefulWidget {
-  const IncrementFunctionPage({super.key});
+class InteractiveShowcasePage extends StatefulWidget {
+  const InteractiveShowcasePage({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
-  _IncrementFunctionPageState createState() => _IncrementFunctionPageState();
+  _InteractiveShowcasePageState createState() =>
+      _InteractiveShowcasePageState();
 }
 
-class _IncrementFunctionPageState extends State<IncrementFunctionPage> {
+class _InteractiveShowcasePageState extends State<InteractiveShowcasePage> {
   List<String> listOfStrings = [
     'Hello',
     'testing',

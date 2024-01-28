@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_testing/view/pages/increment_function_page_example/increment_function.dart';
+import 'package:flutter_testing/view/pages/interactive_showcase_page_example/interactive_showcase_page_example.dart';
 
 void main() {
   testWidgets("Test Widget for increment text", (WidgetTester tester) async {
     // Build our widget inside a MaterialApp and trigger a frame.
     await tester.pumpWidget(
       const MaterialApp(
-        home: IncrementFunctionPage(),
+        home: InteractiveShowcasePage(),
       ),
     );
 
