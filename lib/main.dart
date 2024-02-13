@@ -13,12 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<FavoritesProvider>(
-        create: (context) => FavoritesProvider(),
-        child: MaterialApp.router(
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData(useMaterial3: true),
-          routerConfig: AppRouter.router,
-        ));
+      create: (context) => FavoritesProvider(),
+      child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(useMaterial3: true),
+        routerConfig: AppRouter.router,
+      ),
+    );
   }
 }
 //const IncrementFunctionPage(),
